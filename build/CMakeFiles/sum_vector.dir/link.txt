@@ -1,0 +1,1 @@
+/opt/cray/pe/gcc/11.2.0/bin/c++ -O3 -DNDEBUG CMakeFiles/sum_vector.dir/sum_vector.cpp.o CMakeFiles/benchmark.dir/benchmark.cpp.o -o sum_vector 

@@ -1,0 +1,6 @@
+/global/homes/j/jivtur/sum_harness/build/CMakeFiles/rebuild_cache.dir
+/global/homes/j/jivtur/sum_harness/build/CMakeFiles/edit_cache.dir
+/global/homes/j/jivtur/sum_harness/build/CMakeFiles/sum_indirect.dir
+/global/homes/j/jivtur/sum_harness/build/CMakeFiles/sum_vector.dir
+/global/homes/j/jivtur/sum_harness/build/CMakeFiles/sum_direct.dir
+/global/homes/j/jivtur/sum_harness/build/CMakeFiles/benchmark.dir
