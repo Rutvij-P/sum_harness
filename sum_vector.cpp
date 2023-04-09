@@ -9,7 +9,7 @@
 void 
 setup(int64_t N, uint64_t A[])
 {
-    printf(" inside sum_vector problem_setup, N=%lld \n", N);
+    printf(" inside sum_vector problem_setup, N=%lld \n", (long long int) N);
     for (int i = 0; i < N; i++) {
         A[i] = i;
     }
@@ -18,7 +18,7 @@ setup(int64_t N, uint64_t A[])
 int64_t
 sum(int64_t N, uint64_t A[])
 {
-    printf(" inside sum_vector perform_sum, N=%lld \n", N);
+    printf(" inside sum_vector perform_sum, N=%lld \n", (long long int) N);
 
     // Start timing
     auto start_time = std::chrono::high_resolution_clock::now();

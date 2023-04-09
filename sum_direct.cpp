@@ -8,7 +8,7 @@
 
 void setup(int64_t N, uint64_t A[])
 {
-   printf(" inside direct_sum problem_setup, N=%lld \n", N);
+   printf(" inside direct_sum problem_setup, N=%ld \n", N);
 
    // generate random numbers for the array A
    std::mt19937_64 rng(std::random_device{}());
@@ -20,7 +20,7 @@ void setup(int64_t N, uint64_t A[])
 
 int64_t sum(int64_t N, uint64_t A[])
 {
-   printf(" inside direct_sum perform_sum, N=%lld \n", N);
+   printf(" inside direct_sum perform_sum, N=%ld \n", N);
 
    int64_t sum = 0;
 
@@ -36,8 +36,7 @@ int64_t sum(int64_t N, uint64_t A[])
    auto elapsed_time =
        std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - start_time).count();
 
-   printf(" Time elapsed for sum operation: %lld ns\n", elapsed_time);
+   printf(" Time elapsed for sum operation: %ld ns\n", elapsed_time);
 
    return sum;
 }
-
