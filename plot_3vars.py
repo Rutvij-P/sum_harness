@@ -19,9 +19,9 @@ Assumptions: developed and tested using Python version 3.8.8 on macOS 11.6
 import pandas as pd
 import matplotlib.pyplot as plt
 
-plot_fname = "bandwidth.png"
+plot_fname = "mflops.png"
 
-fname = "bandwidth.csv"
+fname = "mflops.csv"
 df = pd.read_csv(fname, comment="#")
 print(df)
 
@@ -39,7 +39,7 @@ code3_time = df[var_names[3]].values.tolist()
 
 plt.figure()
 
-plt.title("Comparison of 3 Codes")
+plt.title("MFLOPs vs Problem Size")
 
 xlocs = [i for i in range(len(problem_sizes))]
 
@@ -53,7 +53,7 @@ plt.plot(code3_time, "g-^")
 # plt.yscale("log")
 
 plt.xlabel("Problem Sizes")
-plt.ylabel("Memory Bandwidth (GB/s)")
+plt.ylabel("MFLOPs")
 
 varNames = [var_names[1], var_names[2], var_names[3]]
 plt.legend(varNames, loc="best")
