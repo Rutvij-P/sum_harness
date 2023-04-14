@@ -15,18 +15,14 @@ setup(int64_t N, uint64_t A[])
     }
 }
 
-int64_t
-sum(int64_t N, uint64_t A[])
-{
-    printf(" inside sum_vector perform_sum, N=%lld \n", (long long int) N);
+int64_t sum(int64_t N, uint64_t A[]) {
+    std::vector<uint64_t> vec_A(N);
+    std::memcpy(vec_A.data(), A, N * sizeof(uint64_t));
 
     // Start timing
     auto start_time = std::chrono::high_resolution_clock::now();
 
-    uint64_t sum = 0;
-    for (int i = 0; i < N; i++) {
-        sum += A[i];
-    }
+    uint64_t sum = std::accumulate(vec_A.begin(), vec_A.end(), 0UL);
 
     // End timing and calculate elapsed time
     auto end_time = std::chrono::high_resolution_clock::now();
