@@ -40,3 +40,14 @@ int64_t sum(int64_t N, uint64_t A[])
 
    return sum;
 }
+
+double run_benchmark(int64_t N, uint64_t A[]) {
+   double sum_time = 0;
+
+   // perform sum operation multiple times
+   for (int i = 0; i < 100000; i++) {
+      sum_time += sum(N, A);
+   }
+
+   return sum_time;
+}

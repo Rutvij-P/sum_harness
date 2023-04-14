@@ -9,7 +9,7 @@
 void 
 setup(int64_t N, uint64_t A[])
 {
-   std::cout << "inside sum_indirect problem_setup, N=" << N << std::endl;
+    std::cout << "inside sum_indirect problem_setup, N=" << N << std::endl;
     srand48(0);
     for (int64_t i = 0; i < N; i++) {
         A[i] = lrand48() % N;
@@ -26,7 +26,7 @@ sum(int64_t N, uint64_t A[])
 
     int64_t result = 0;
     for (int64_t i = 0; i < N; i++) {
-        result += A[i];
+        result += A[A[i]];
     }
 
     // End timing and calculate elapsed time
@@ -36,7 +36,5 @@ sum(int64_t N, uint64_t A[])
     // Print elapsed time
     std::cout << "Elapsed time: " << elapsed_time.count() << " seconds" << std::endl;
 
-   return result;
+    return result;
 }
-
-
