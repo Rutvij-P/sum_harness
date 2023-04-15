@@ -12,13 +12,6 @@ This main() will make calls to two routines that must be provided by your code:
 
 This harness will generate three different executables using the one benchmark.cpp containing main(), and then using sum_direct.cpp, sum_indirect.cpp, or sum_vector.cpp.
 
-Your job is to:
-
-* Add code for setup() and sum() in each of sum_direct.cpp, sum_indirect.cpp, and sum_vector.cpp
-* Add instrumention code in benchmark.cpp to measure elapsed time for the call to the sum() routine
-
-You should not need to modify anything inside CMakeLists.txt.
-
 # Default build instructions:
 
 
@@ -59,17 +52,6 @@ For -O0: no optimization in gcc/g++
    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O0")
 
 After modifying CMakeLists.txt, clean your build directory, and rerun cmake and then make.
-
-
-# Adding your code
-
-You will need to add code in three places:
-
-* Inside benchmark.cpp: please add instrumentation code that will measure and report elapsed time consumed by the call to the sum() routine. Please refer to the [chrono_timer code](https://github.com/SFSU-CSC746/chrono_timer) for an example of how to do this kind of time measurement.
-
-* The setup() routine inside each of sum_direct.cpp, sum_indirect.cpp, and sum_vector.cpp. See the homework writeup for details on how to perform initialization for each of these different codes.
-
-* The sum() routine inside each of sum_direct.cpp, sum_indirect.cpp, and sum_vector.cpp. See the homework writeup for details on how to perform the sum operation for each of these different codes.
 
 # Running the codes
 
